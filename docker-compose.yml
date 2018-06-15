@@ -1,0 +1,35 @@
+version: '3.2'
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    hostname: mosquitto
+    restart: on-failure
+    volumes:
+      - mosquitto-config:/mosquitto/config
+      - mosquitto-data:/mosquitto/data
+      - mosquitto-log:/mosquitto/log
+  mariadb:
+    image: mariadb:latest
+    hostname: mariadb
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpwd
+      MYSQL_DATABASE: ft
+      MYSQL_USER: ft
+      MYSQL_PASSWORD: ftpwd
+    volumes:
+      - mariadb:/var/lib/mysql
+  adminer:
+    image: adminer:latest
+    hostname: adminer
+    restart: on-failure
+    depends_on:
+      - mariadb
+    ports:
+      - 10000:8080
+volumes:
+  mosquitto-config:
+  mosquitto-data:
+  mosquitto-log:
+  mariadb:

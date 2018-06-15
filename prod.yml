@@ -1,0 +1,11 @@
+version: '3.2'
+services:
+  ft:
+    build: ./FTWebAPI
+    hostname: ft
+    restart: on-failure
+    depends_on:
+      - mosquitto
+      - mariadb
+    ports:
+      - 10001:8080
