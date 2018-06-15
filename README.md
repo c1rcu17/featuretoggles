@@ -5,20 +5,20 @@ A REST service that enables applications to have toggles to enable/disable featu
 
 REST API: Java + Spring framework + Java JPA (Mysql db) + JWT tokens for authentication
 
-*Messaging*: Eclipse Mosquitto
+**Messaging**: Eclipse Mosquitto
 
-*Documentation*: Live Swagger UI (Spring integration)
+**Documentation**: Live Swagger UI (Spring integration)
 
-*Tests*: Spring tests (JUnit)
+**Tests**: Spring tests (JUnit)
 
-*Deploy*: Docker + Docker Compose
+**Deploy**: Docker + Docker Compose
 
 # Install Dependencies
 
-*Docker*:
+**Docker**:
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
-*Docker Compose*:
+**Docker Compose**:
 https://docs.docker.com/compose/install/#prerequisites
 
 # To start the project
@@ -35,19 +35,19 @@ The application is configured to reset the database at every restart.
 
 ## Admin Account:
 
-*Username*: admin
+**Username**: admin
 
-*Password*: 1234
+**Password**: 1234
 
 ## Web frontend for toggles
-*Access*: http://127.0.0.1:10001
+**Access**: http://127.0.0.1:10001
 
 This frontend let's you test the toggles. After you enter the password, it will fetch the JWT token from the REST API and allow you to use the toggles.
 
 There is also a text area where you can see the published messages on the Mosquitto broker
 
 ## REST API documentation:
-*Access*: http://127.0.0.1:10001/swagger-ui.html
+**Access**: http://127.0.0.1:10001/swagger-ui.html
 
 This documentation allows you to try the api.
 
@@ -58,7 +58,7 @@ This documentation allows you to try the api.
 
 # Subscribing to mosquitto broker
 
-By installing the package *mosquitto-clients* (apt-get install mosquitto-clients) you can use the folowing commands to simulate live token change notifications:
+By installing the package **mosquitto-clients** (apt-get install mosquitto-clients) you can use the folowing commands to simulate live token change notifications:
 
 
 | Command | Description |
