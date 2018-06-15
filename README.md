@@ -1,24 +1,24 @@
 # Feature Toggles
 A REST service that enables applications to have toggles to enable/disable features at run-time without deployment
 
-# Technologies used
+# Technologies Used
 
 REST API: Java + Spring framework + Java JPA (Mysql db) + JWT tokens for authentication
 
-Messaging: Eclipse Mosquitto
+*Messaging*: Eclipse Mosquitto
 
-Documentation: Live Swagger UI (Spring integration)
+*Documentation*: Live Swagger UI (Spring integration)
 
-Tests: Spring tests (JUnit)
+*Tests*: Spring tests (JUnit)
 
-Deploy: Docker + Docker Compose
+*Deploy*: Docker + Docker Compose
 
 # Install Dependencies
 
-Docker:
+*Docker*:
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
-Docker Compose:
+*Docker Compose*:
 https://docs.docker.com/compose/install/#prerequisites
 
 # To start the project
@@ -31,33 +31,34 @@ sudo docker-compose -f docker-compose.yml -f prod.yml up
 
 The application is configured to reset the database at every restart.
 
-# Web interface
+# Web Interface
 
-## Admin account:
+## Admin Account:
 
-Username: admin
-Password: 1234
+*Username*: admin
+
+*Password*: 1234
 
 ## Web frontend for toggles
-http://127.0.0.1:10001
+*Access*: http://127.0.0.1:10001
 
 This frontend let's you test the toggles. After you enter the password, it will fetch the JWT token from the REST API and allow you to use the toggles.
 
 There is also a text area where you can see the published messages on the Mosquitto broker
 
-## REST API Documentation:
-http://127.0.0.1:10001/swagger-ui.html
+## REST API documentation:
+*Access*: http://127.0.0.1:10001/swagger-ui.html
 
 This documentation allows you to try the api.
 
-* The only endpoint available is POST(/api/auth) to fetch the JWT token.
+* The only endpoint available is POST (/api/auth) to fetch the JWT token.
 * There is a button on the Swagger UI that lets you insert the token to try the other endpoints.
 * For the admin account, every endpoint is available.
-* For application users, only GET(/api/applications/{name}/{version}/toggles) and GET(/api/applications/{name}/{version}/toggles/{toggleName}) is available to retrieve the application toggle status
+* For application users, only GET (/api/applications/{name}/{version}/toggles) and GET (/api/applications/{name}/{version}/toggles/{toggleName}) is available to retrieve the application toggle status
 
 # Subscribing to mosquitto broker
 
-By installing the package mosquitto-clients (apt-get install mosquitto-clients) you can use the folowing command to simulate live token change notifications:
+By installing the package *mosquitto-clients* (apt-get install mosquitto-clients) you can use the folowing commands to simulate live token change notifications:
 
 
 | Command | Description |
