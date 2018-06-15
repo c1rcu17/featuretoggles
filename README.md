@@ -3,9 +3,11 @@ A REST service that enables applications to have toggles to enable/disable featu
 
 # Technologies Used
 
-REST API: Java + Spring framework + Java JPA (Mysql db) + JWT tokens for authentication
+**REST API**: Java + Spring framework + Java JPA (Mysql db) + JWT tokens for authentication
 
 **Messaging**: Eclipse Mosquitto
+
+**Web frontend**: Vue.js + Bulma
 
 **Documentation**: Live Swagger UI (Spring integration)
 
@@ -31,7 +33,7 @@ sudo docker-compose -f docker-compose.yml -f prod.yml up
 
 The application is configured to reset the database at every restart.
 
-# Web Interface
+# Web Frontend
 
 ## Admin Account
 
