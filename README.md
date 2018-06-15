@@ -33,7 +33,7 @@ The application is configured to reset the database at every restart.
 
 # Web Interface
 
-## Admin Account:
+## Admin Account
 
 **Username**: admin
 
@@ -46,7 +46,7 @@ This frontend let's you test the toggles. After you enter the password, it will 
 
 There is also a text area where you can see the published messages on the Mosquitto broker
 
-## REST API documentation:
+## REST API documentation
 **Access**: http://127.0.0.1:10001/swagger-ui.html
 
 This documentation allows you to try the api.
